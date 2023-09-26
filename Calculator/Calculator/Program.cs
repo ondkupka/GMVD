@@ -22,12 +22,12 @@ namespace Calculator
             if (answer == "1")
             {
                 Console.Clear();
-                algebra();
+                Algebra();
             }
             else if (answer == "2")
             {
                 Console.Clear();
-                goniometrie();
+                Goniometrie();
             }
             else if (answer == "3")
             {
@@ -35,7 +35,7 @@ namespace Calculator
             }
             Console.ReadKey();        
         }
-        public static void algebra()
+        public static void Algebra()
         {
             float x, y;
             char no; // no = Numeric Operator 
@@ -85,7 +85,7 @@ namespace Calculator
             }
             Console.WriteLine(result);
         }
-        public static void goniometrie()
+        public static void Goniometrie()
         {
             char o;
             double degrees;
