@@ -17,7 +17,7 @@ namespace Calculator
         static void Main(string[] args)
         {
             Console.WriteLine("Ahoj, s čím ti můžu pomoct?");
-            Console.WriteLine("Zvol 1 pro základní číselné operace, 2 pro výpočet goneometrických funkcí, 3 pro mocnění čísel");
+            Console.WriteLine("Zvol 1 pro základní číselné operace, 2 pro výpočet goneometrických funkcí, 3 pro čísla převod na binární kod, 4 pro mocnění");
             string answer = Console.ReadLine();
             if (answer == "1")
             {
@@ -32,12 +32,18 @@ namespace Calculator
             else if (answer == "3")
             {
                 Console.Clear();
+                Binary();
+            }
+            else if (answer == "4")
+            {
+                Console.Clear();
+                Power();
             }
             Console.ReadKey();        
         }
-        public static void Algebra()
+        static void Algebra()
         {
-            float x, y;
+            float x, y; //x značí první číslo y značí druhé číslo 
             char no; // no = Numeric Operator 
             float result = 0;
 
@@ -85,7 +91,7 @@ namespace Calculator
             }
             Console.WriteLine(result);
         }
-        public static void Goniometrie()
+        static void Goniometrie()
         {
             char o;
             double degrees;
@@ -121,5 +127,44 @@ namespace Calculator
                 }
                 Console.WriteLine(result);
         }
+        
+        static void Binary()
+        {
+            string input;
+            string result;
+            int num;
+            Console.WriteLine("Zadej číslo, které chceš převést na binární kod");
+            input = Console.ReadLine();
+            if (Int32.TryParse(input.ToString(), out int number))
+            {
+                num = Convert.ToInt32(input);
+                result = Convert.ToString(num, 2);
+                Console.WriteLine("Výsledek převodu je: " + result);
+            }
+        }
+
+        static void Power()
+        {
+            float x, y; // proměná x je základ, proměná y exponent 
+            double result = 0;
+             
+
+            Console.WriteLine("Zadej prosím základ");
+            while (!float.TryParse(Console.ReadLine(), out x))
+            {
+                Console.WriteLine("Zadej prosím platné číslo:");
+            }
+
+            Console.WriteLine("Zadej prosím exponent na který chceš mocnit");
+            while (!float.TryParse(Console.ReadLine(), out y))
+            {
+                Console.WriteLine("Zadej prosím platný exponent:");
+            }
+
+            result = Math.Pow(x, y);
+            Console.WriteLine("Výsledek " + x + "^" + y + " je " + result);
+        }
     }
 }
+
+//Ondřej Kupka 4.D 
