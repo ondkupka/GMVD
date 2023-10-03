@@ -14,6 +14,7 @@ namespace Calculator
 {
     internal class Program
     {
+        public float result = 0;
         static void Main(string[] args)
         {
             Console.WriteLine("Kalkulačka v1.2");
@@ -90,6 +91,8 @@ namespace Calculator
                     break;
             }
             Console.WriteLine(result);
+            Binary();
+
         }
         static void Goniometrie()
         {
@@ -130,18 +133,14 @@ namespace Calculator
         
         static void Binary()
         {
-            string input;
-            string result;
-            int num;
             Console.WriteLine("Zadej číslo, které chceš převést na binární kod");
-            input = Console.ReadLine();
+            string input = Console.ReadLine();
             if (Int32.TryParse(input.ToString(), out int number))
             {
-                num = Convert.ToInt32(input);
-                result = Convert.ToString(num, 2);
-                Console.Clear();
-                Console.WriteLine("Výsledek převodu je: " + result);
-            }
+                int num = Convert.ToInt32(input);
+                string result = Convert.ToString(num, 2);
+                Console.WriteLine("Výsledek převedený na binární kod je: " + result);
+            } 
         }
 
         static void Power()
@@ -165,7 +164,14 @@ namespace Calculator
             result = Math.Pow(x, y);
             Console.WriteLine("Výsledek " + x + "^" + y + " je " + result);
         }
+
     }
 }
 
 //Ondřej Kupka 4.D 
+/*Kalkulačka umí:
+Základní číselné operace (+,-,*,/ )
+Mocinit
+Využívat goneometrické funkce (sinus, cosinus, tangenc, cotangenc)
+Převést číslo na binární kod
+*/
