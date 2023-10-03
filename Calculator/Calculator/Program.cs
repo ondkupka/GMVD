@@ -16,8 +16,8 @@ namespace Calculator
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Ahoj, s čím ti můžu pomoct?");
-            Console.WriteLine("Zvol 1 pro základní číselné operace, 2 pro výpočet goneometrických funkcí, 3 pro čísla převod na binární kod, 4 pro mocnění");
+            Console.WriteLine("Kalkulačka v1.2");
+            Console.WriteLine("Zvol: " + Environment.NewLine + "1 pro základní číselné operace" + Environment.NewLine + "2 pro výpočet goneometrických funkcí" + Environment.NewLine + "3 pro čísla převod na binární kod" + Environment.NewLine + "4 pro mocnění");
             string answer = Console.ReadLine();
             if (answer == "1")
             {
@@ -139,6 +139,7 @@ namespace Calculator
             {
                 num = Convert.ToInt32(input);
                 result = Convert.ToString(num, 2);
+                Console.Clear();
                 Console.WriteLine("Výsledek převodu je: " + result);
             }
         }
@@ -154,13 +155,13 @@ namespace Calculator
             {
                 Console.WriteLine("Zadej prosím platné číslo:");
             }
-
+            Console.Clear();
             Console.WriteLine("Zadej prosím exponent na který chceš mocnit");
             while (!float.TryParse(Console.ReadLine(), out y))
             {
                 Console.WriteLine("Zadej prosím platný exponent:");
             }
-
+            Console.Clear();
             result = Math.Pow(x, y);
             Console.WriteLine("Výsledek " + x + "^" + y + " je " + result);
         }
