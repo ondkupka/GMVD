@@ -96,7 +96,6 @@ namespace Calculator
                     break;
             }
             Console.WriteLine(result);
-            Binary();
 
         }
         static void Goniometry()
@@ -112,7 +111,7 @@ namespace Calculator
             }
             Console.Clear();
             radians = degrees * Math.PI / 180; //převádíme ze stupňů na radiány 
-            Console.WriteLine("1 pro sinus, 2 pro cosinus, 3 pro tangens, 4 pro cotangens");
+            Console.WriteLine("Zvol: 1 pro sinus, 2 pro cosinus, 3 pro tangens, 4 pro cotangens");
             while (!char.TryParse(Console.ReadLine(), out f) || (f != '1' && f != '2' && f != '3' && f != '4'))
             {
                 Console.WriteLine("Zadej prosím platnou operaci:");
@@ -197,7 +196,7 @@ namespace Calculator
                 }
                 double decimalLogarithm = Math.Log10(x);
                 Console.Clear();
-                Console.WriteLine("Výsledek přirozeného logaritmu je " + decimalLogarithm);
+                Console.WriteLine("Výsledek desítkového logaritmu je " + decimalLogarithm);
             }
 
             
