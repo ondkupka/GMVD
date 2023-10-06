@@ -174,7 +174,7 @@ namespace Calculator
             float x;
             Console.WriteLine("Zvol: " + Environment.NewLine + "1 pro přirozený logaritmus" + Environment.NewLine + "2 pro desítkový logaritmus");
             string answer = Console.ReadLine();
-            if (answer == "1") // tento if přehozuje mezi jednotlivými funkcemi kalkulačky 
+            if (answer == "1") // tento if přehazuje mezi jednotlivými typy logaritmů
             {
                 Console.Clear();
                 Console.WriteLine("Zadej číslo, které chceš logaritmovat");
