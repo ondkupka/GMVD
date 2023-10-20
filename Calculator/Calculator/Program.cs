@@ -18,17 +18,17 @@ namespace Calculator
         static void Main(string[] args)
         {
             Console.WriteLine("Kalkulačka v1.2");
-            Console.WriteLine("Zvol: " + Environment.NewLine + "1 pro základní číselné operace" + Environment.NewLine + "2 pro výpočet goneometrických funkcí" + Environment.NewLine + "3 pro čísla převod na binární kod" + Environment.NewLine + "4 pro mocnění");
+            Console.WriteLine("Zvol: " + Environment.NewLine + "1 pro základní číselné operace" + Environment.NewLine + "2 pro výpočet goneometrických funkcí" + Environment.NewLine + "3 pro čísla převod na binární kod" + Environment.NewLine + "4 pro mocnění" + Environment.NewLine + "5 pro logaritmování čísla");
             string answer = Console.ReadLine();
-            if (answer == "1")
+            if (answer == "1") // tento if přehozuje mezi jednotlivými funkcemi kalkulačky 
             {
                 Console.Clear();
-                Algebra();
+                Basic();
             }
             else if (answer == "2")
             {
                 Console.Clear();
-                Goniometrie();
+                Goniometry();
             }
             else if (answer == "3")
             {
@@ -40,9 +40,14 @@ namespace Calculator
                 Console.Clear();
                 Power();
             }
+            else if (answer == "5")
+            {
+                Console.Clear();
+                Logarithm();
+            }
             Console.ReadKey();        
         }
-        static void Algebra()
+        static void Basic()
         {
             float x, y; //x značí první číslo y značí druhé číslo 
             char no; // no = Numeric Operator 
@@ -67,7 +72,7 @@ namespace Calculator
                 Console.WriteLine("Zadej prosím platnou operaci:");
             }
 
-            switch (no) // tohle by šlo udělat i přes if a else if viz zadání, ale tohle je asi jednodušší varianta.
+            switch (no) // tento switch mění mezi číselnými operátory -> dle mého jednodušší než přes if 
             {
                 case '+':
                     result = x + y;
@@ -79,24 +84,23 @@ namespace Calculator
                     result = x * y;
                     break;
                 case '/':
-                    if (y != 0)
+                    if (y != 0) // kontrola dělení nulou
                     {
                         result = x / y;
                     }
                     else
                     {
-                        Console.WriteLine("Nulou přeci dělit nemůžeš :(!");
+                        Console.WriteLine("Nulou přeci dělit nemůžeš :(!"); 
                         return;
                     }
                     break;
             }
             Console.WriteLine(result);
-            Binary();
 
         }
-        static void Goniometrie()
+        static void Goniometry()
         {
-            char o;
+            char f; // f = funkce 
             double degrees;
             double radians;
             double result = 0;
@@ -107,13 +111,13 @@ namespace Calculator
             }
             Console.Clear();
             radians = degrees * Math.PI / 180; //převádíme ze stupňů na radiány 
-            Console.WriteLine("1 pro sinus, 2 pro cosinus, 3 pro tangens, 4 pro cotangens");
-            while (!char.TryParse(Console.ReadLine(), out o) || (o != '1' && o != '2' && o != '3' && o != '4'))
+            Console.WriteLine("Zvol: 1 pro sinus, 2 pro cosinus, 3 pro tangens, 4 pro cotangens");
+            while (!char.TryParse(Console.ReadLine(), out f) || (f != '1' && f != '2' && f != '3' && f != '4'))
             {
                 Console.WriteLine("Zadej prosím platnou operaci:");
             }
             Console.Clear();
-                switch (o)
+                switch (f) // přehazuje mezi funkcemi sinus/cosinus atd. 
                 {
                     case '1':
                         result = Math.Sin(radians);
@@ -165,6 +169,39 @@ namespace Calculator
             Console.WriteLine("Výsledek " + x + "^" + y + " je " + result);
         }
 
+        static void Logarithm()
+        {
+            float x;
+            Console.WriteLine("Zvol: " + Environment.NewLine + "1 pro přirozený logaritmus" + Environment.NewLine + "2 pro desítkový logaritmus");
+            string answer = Console.ReadLine();
+            if (answer == "1") // tento if přehazuje mezi jednotlivými typy logaritmů
+            {
+                Console.Clear();
+                Console.WriteLine("Zadej číslo, které chceš logaritmovat");
+                while (!float.TryParse(Console.ReadLine(), out x))
+                {
+                    Console.WriteLine("Zadej prosím platné číslo:");
+                }
+                double naturalnLogarithm = Math.Log(x);
+                Console.Clear();
+                Console.WriteLine("Výsledek přirozeného logaritmu je " + naturalnLogarithm);
+            }
+            else if (answer == "2")
+            {
+                Console.Clear();
+                Console.WriteLine("Zadej číslo, které chceš logaritmovat");
+                while (!float.TryParse(Console.ReadLine(), out x))
+                {
+                    Console.WriteLine("Zadej prosím platné číslo:");
+                }
+                double decimalLogarithm = Math.Log10(x);
+                Console.Clear();
+                Console.WriteLine("Výsledek desítkového logaritmu je " + decimalLogarithm);
+            }
+
+            
+        }
+
     }
 }
 
@@ -173,5 +210,6 @@ namespace Calculator
 Základní číselné operace (+,-,*,/ )
 Mocinit
 Využívat goneometrické funkce (sinus, cosinus, tangenc, cotangenc)
+Využívát desítkový i přirozený logaritmus
 Převést číslo na binární kod
 */
