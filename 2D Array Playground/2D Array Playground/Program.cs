@@ -45,7 +45,20 @@ namespace _2D_Array_Playground
             Console.Write("\n");
             //TODO 4: Prohoď prvek na souřadnicích [xFirst, yFirst] s prvkem na souřadnicích [xSecond, ySecond] a vypiš celé pole do konzole po prohození.
             //Nápověda: Budeš potřebovat proměnnou navíc, do které si uložíš první z prvků před tím, než ho přepíšeš druhým, abys hodnotou prvního prvku potom mohl přepsat druhý
-            int xFirst, yFirst, xSecond, ySecond;
+      /*      Console.WriteLine("tady");
+            int xFirst = 0, yFirst = 0, xSecond = 1, ySecond = 1;
+            int temp = myArray[xFirst, yFirst];
+            myArray[xFirst, yFirst] = myArray[xSecond, ySecond];
+            myArray[xSecond, ySecond] = temp;
+            for (int i = 0; i < myArray.GetLength(0); i++)
+            {
+                for (int j = 0; j < myArray.GetLength(1); j++)
+                {
+                    Console.Write(myArray[i, j] + " ");
+                }
+                Console.Write("\n");
+            } */
+            Console.Write("\n");
             //BONUS TODO vypiš prvky hlavní diagonály
             for (int i = 0; i < myArray.GetLength(0); i++)
             {
@@ -60,8 +73,24 @@ namespace _2D_Array_Playground
             }
             Console.Write("\n");
             //TODO 5: Prohoď n-tý řádek v poli s m-tým řádkem (n je dáno proměnnou nRowSwap, m mRowSwap) a vypiš celé pole do konzole po prohození.
+            Console.WriteLine("xxd");
             int nRowSwap = 0;
             int mRowSwap = 1;
+            for (int j = 0; j < myArray.GetLength(1); j++)
+            {
+                int tempSwap = myArray[nRowSwap, j];
+                myArray[nRowSwap, j] = myArray[mRowSwap, j];
+                myArray[mRowSwap, j] = tempSwap;
+            }
+            for (int i = 0; i < myArray.GetLength(0); i++)
+            {
+                for (int j = 0; j < myArray.GetLength(1); j++)
+                {
+                    Console.Write(myArray[i, j] + " ");
+                }
+                Console.Write("\n");
+            }
+            Console.Write("\n");
 
             //TODO 6: Prohoď n-tý sloupec v poli s m-tým sloupcem (n je dáno proměnnou nColSwap, m mColSwap) a vypiš celé pole do konzole po prohození.
             int nColSwap = 0;
