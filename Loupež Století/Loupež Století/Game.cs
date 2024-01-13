@@ -28,7 +28,7 @@ namespace Loupež_Století
         }
         public void startGame()
         {
-            Character player = new Character("Petr Klíč", "Chytrý soukromý detektiv s pověstí řešitele tajemných případů");
+            Character player = new Character("Petr Klíč", "chytrý soukromý detektiv s pověstí řešitele tajemných případů");
             Console.WriteLine($"Vítejte ve světě detektivky. Jste {player.name}, {player.description}.");
             Console.WriteLine("Dnes ráno jste přišel do své kanceláře a na svém stole jste našel tajemný dopis.");
             Console.WriteLine("Dopis obsahuje výzvu k řešení záhadného případu, který se týká krádeže uměleckého díla v muzeu.");
@@ -55,7 +55,7 @@ namespace Loupež_Století
                 Console.WriteLine(" /|\\");
                 Console.WriteLine(" / \\");
                 Console.WriteLine("^^^^^");
-                Evidence photo = new Evidence("Fotka", "Fotka muže snědé pleti, na fotce nejsou vidět jeho rysy");
+                Evidence photo = new Evidence("Fotka", "Fotka muže snědé pleti, na fotce nejsou vidět jeho rysy.");
                 Console.WriteLine(Environment.NewLine + $"Popis důkazu: {photo.description}");
                 this.Evidence.Add(photo);
                 numberOfEvidence++;
@@ -108,7 +108,7 @@ namespace Loupež_Století
                                      _|                                                                                                    
                                  _|_|                                                                                                      ";
                     Console.WriteLine(asciiArt+ "\n");
-                    Console.WriteLine("Gratuluji!\nPodařilo se ti vyřešit záhadu ukradeného obrazu a zařadil ses tím mezi nejlepší detektivy!");
+                    Console.WriteLine("Gratuluji!\nPodařilo se ti vyřešit záhadu ukradeného obrazu, a zařadil ses tím mezi nejlepší detektivy!");
                 }
                 else
                 {
@@ -203,14 +203,14 @@ namespace Loupež_Století
                         evidenceCheck();
                         break;
                     case '2':
-                        Npcs policeOfficer = new Npcs("Mirek měšťák", "Obtloustlý policista.", false);
+                        Npcs policeOfficer = new Npcs("Mirek Měšťák", "Obtloustlý policista.", false);
                         Npcs.Add(policeOfficer);
                         talkToNPC(policeOfficer);
                         Console.WriteLine("Zdravím pane policisto, nezjistil jste tady na místě něco zajímavého?");
                         Console.WriteLine($"{policeOfficer.name}: No to žejo záleží kdo se ptá.");
                         Console.WriteLine("Já jsem soukromý detektiv Klíč.");
-                        Console.WriteLine($"{policeOfficer.name}: detektiv jo? To si ale musim ověřit\nVyřeš tuhle hádanku a hned bude jasný jestli jsi tak chytrej!");
-                        Console.WriteLine($"{policeOfficer.name}: Co je to, co běží až za tebou, když utečeš z banky, ale nikdy tě nechytnou?");
+                        Console.WriteLine($"{policeOfficer.name}: detektiv jo? To si ale musim ověřit.\nVyřeš tuhle hádanku a hned bude jasný jestli jsi tak chytrej!");
+                        Console.WriteLine($"{policeOfficer.name}: Co je to, co běží za tebou, když utečeš z banky, ale nikdy tě nechytnou?");
                         for (int i = 0; i < 2; i++)
                         {
                             string answer = Console.ReadLine();
@@ -268,7 +268,7 @@ namespace Loupež_Století
                         
                         Npcs sus1 = new Npcs("Karel Kapsář", "Muž menšího vzrůstu, bílé pleti, brýle", true);
                         Npcs sus2 = new Npcs("Lukáš Loupežník", "Muž středního vzrůstu, snědší pleti, modré oči", true);    
-                        Npcs sus3 = new Npcs("Pavla Pavla Příživníková", "Žena nižšího vzrůstu, bílé pleti, černé vlasy, hnědé oči", true);
+                        Npcs sus3 = new Npcs("Pavla Příživníková", "Žena nižšího vzrůstu, bílé pleti, černé vlasy, hnědé oči", true);
                         Npcs sus4 = new Npcs("Ondřej Bartolomeo", "Muž vyššího vzrůstu, snědší pleti, černé vlasy, tmavé a mokré vlasy", true);
                        
                         Npcs.Add(sus1);
