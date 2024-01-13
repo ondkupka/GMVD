@@ -165,7 +165,7 @@ namespace matice
                 {
                     for (int j = 0; j < cols; j++)
                     {
-                        array[i, j] = random.Next(1, 10); // Úprava rozsahu podle potřeby
+                        array[i, j] = random.Next(1, 10); 
                     }
                 }
             }
