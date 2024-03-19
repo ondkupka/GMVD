@@ -158,5 +158,16 @@ namespace painT_project
         {
             buttonHandler.ColorButton_Click(sender, e, pc_btn, sc_btn, crrnt_clr);
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void trackBar1_Scroll(object sender, EventArgs e)
+        {
+            int value = trackBar1.Value + 1;
+            label3.Text = value.ToString() + " px";
+        }
     }
 }

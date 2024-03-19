@@ -63,9 +63,9 @@ namespace painT_project.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap color1 {
+        internal static System.Drawing.Bitmap eraser {
             get {
-                object obj = ResourceManager.GetObject("color1", resourceCulture);
+                object obj = ResourceManager.GetObject("eraser", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -103,6 +103,16 @@ namespace painT_project.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap palette1 {
+            get {
+                object obj = ResourceManager.GetObject("palette1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap pencil {
             get {
                 object obj = ResourceManager.GetObject("pencil", resourceCulture);
@@ -113,9 +123,19 @@ namespace painT_project.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap pencil1 {
+        internal static System.Drawing.Bitmap rectangle {
             get {
-                object obj = ResourceManager.GetObject("pencil1", resourceCulture);
+                object obj = ResourceManager.GetObject("rectangle", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap spraycan {
+            get {
+                object obj = ResourceManager.GetObject("spraycan", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
