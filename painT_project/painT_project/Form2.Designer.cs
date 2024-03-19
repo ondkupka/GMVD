@@ -30,12 +30,17 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.trackBar1 = new System.Windows.Forms.TrackBar();
             this.label1 = new System.Windows.Forms.Label();
             this.crrnt_clr = new System.Windows.Forms.Panel();
+            this.clrpick_btn = new System.Windows.Forms.Button();
             this.c19 = new System.Windows.Forms.Button();
             this.c18 = new System.Windows.Forms.Button();
             this.c17 = new System.Windows.Forms.Button();
@@ -62,13 +67,10 @@
             this.c1 = new System.Windows.Forms.Button();
             this.sc_btn = new System.Windows.Forms.Button();
             this.pc_btn = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.clrpick_btn = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -117,11 +119,59 @@
             this.panel1.Size = new System.Drawing.Size(1452, 105);
             this.panel1.TabIndex = 0;
             // 
+            // button5
+            // 
+            this.button5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button5.ForeColor = System.Drawing.Color.White;
+            this.button5.Image = global::painT_project.Properties.Resources.rectangle;
+            this.button5.Location = new System.Drawing.Point(277, 19);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(84, 80);
+            this.button5.TabIndex = 36;
+            this.button5.Text = "Obdelník";
+            this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            this.button4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button4.ForeColor = System.Drawing.Color.White;
+            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
+            this.button4.Location = new System.Drawing.Point(367, 25);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(84, 70);
+            this.button4.TabIndex = 35;
+            this.button4.Text = "Guma";
+            this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Image = global::painT_project.Properties.Resources.spraycan;
+            this.button3.Location = new System.Drawing.Point(457, 13);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(69, 84);
+            this.button3.TabIndex = 34;
+            this.button3.Text = "Sprej";
+            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.button3.UseVisualStyleBackColor = true;
+            // 
             // button2
             // 
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("ROG Fonts", 10.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Location = new System.Drawing.Point(1420, 4);
             this.button2.Margin = new System.Windows.Forms.Padding(2);
@@ -131,6 +181,22 @@
             this.button2.Text = "X";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button1
+            // 
+            this.button1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Image = global::painT_project.Properties.Resources.pencil;
+            this.button1.Location = new System.Drawing.Point(532, 20);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(69, 77);
+            this.button1.TabIndex = 32;
+            this.button1.Text = "Tužka";
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // label3
             // 
@@ -184,6 +250,23 @@
             this.crrnt_clr.Name = "crrnt_clr";
             this.crrnt_clr.Size = new System.Drawing.Size(109, 69);
             this.crrnt_clr.TabIndex = 27;
+            // 
+            // clrpick_btn
+            // 
+            this.clrpick_btn.FlatAppearance.BorderSize = 0;
+            this.clrpick_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.clrpick_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.clrpick_btn.ForeColor = System.Drawing.Color.White;
+            this.clrpick_btn.Image = global::painT_project.Properties.Resources.palette;
+            this.clrpick_btn.Location = new System.Drawing.Point(1211, 11);
+            this.clrpick_btn.Name = "clrpick_btn";
+            this.clrpick_btn.Size = new System.Drawing.Size(97, 97);
+            this.clrpick_btn.TabIndex = 26;
+            this.clrpick_btn.Text = "Vlastní barvy";
+            this.clrpick_btn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.clrpick_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.clrpick_btn.UseVisualStyleBackColor = true;
+            this.clrpick_btn.Click += new System.EventHandler(this.clrpick_btn_Click);
             // 
             // c19
             // 
@@ -575,86 +658,16 @@
             this.pc_btn.UseVisualStyleBackColor = false;
             this.pc_btn.Click += new System.EventHandler(this.pc_btn_Click);
             // 
-            // button5
+            // pictureBox1
             // 
-            this.button5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Image = global::painT_project.Properties.Resources.rectangle;
-            this.button5.Location = new System.Drawing.Point(277, 19);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(84, 80);
-            this.button5.TabIndex = 36;
-            this.button5.Text = "Obdelník";
-            this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.Location = new System.Drawing.Point(367, 25);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(84, 70);
-            this.button4.TabIndex = 35;
-            this.button4.Text = "Guma";
-            this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Image = global::painT_project.Properties.Resources.spraycan;
-            this.button3.Location = new System.Drawing.Point(457, 13);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(69, 84);
-            this.button3.TabIndex = 34;
-            this.button3.Text = "Sprej";
-            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Image = global::painT_project.Properties.Resources.pencil;
-            this.button1.Location = new System.Drawing.Point(532, 20);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(69, 77);
-            this.button1.TabIndex = 32;
-            this.button1.Text = "Tužka";
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // clrpick_btn
-            // 
-            this.clrpick_btn.FlatAppearance.BorderSize = 0;
-            this.clrpick_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.clrpick_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.clrpick_btn.ForeColor = System.Drawing.Color.White;
-            this.clrpick_btn.Image = global::painT_project.Properties.Resources.palette;
-            this.clrpick_btn.Location = new System.Drawing.Point(1211, 11);
-            this.clrpick_btn.Name = "clrpick_btn";
-            this.clrpick_btn.Size = new System.Drawing.Size(97, 97);
-            this.clrpick_btn.TabIndex = 26;
-            this.clrpick_btn.Text = "Vlastní barvy";
-            this.clrpick_btn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.clrpick_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.clrpick_btn.UseVisualStyleBackColor = true;
-            this.clrpick_btn.Click += new System.EventHandler(this.clrpick_btn_Click);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 122);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1314, 487);
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
+            this.pictureBox1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseMove);
+            this.pictureBox1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseUp);
             // 
             // Form2
             // 
@@ -662,16 +675,18 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1442, 634);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form2";
             this.Text = "Form2";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.Form2_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -716,5 +731,6 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

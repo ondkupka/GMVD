@@ -7,23 +7,33 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Schema;
 
 namespace painT_project
 {
     public partial class Form2 : Form
     {
         ButtonHandler buttonHandler = new ButtonHandler();
-
+        public Point lastPoint;
         public Color color { get; private set; }
-
+        public Bitmap myBitmap;
+        public int value;
+        public int mouseXLast = 0;
+        public int mouseYLast = 0;
+        public bool moving = false;
+        Graphics graphics;
+        Pen myPen = new Pen(Color.Black, 10);
         public Form2()
         {
             InitializeComponent();
+            myBitmap = new Bitmap(pictureBox1.Width, pictureBox1.Height);
+            pictureBox1.Image = myBitmap;
         }
-
+        
         private void clrpick_btn_Click(object sender, EventArgs e)
         {
             ColorDialog cd = new ColorDialog();
+            cd.FullOpen = true;
             cd.ShowDialog();
             color = cd.Color;
             crrnt_clr.BackColor = color;
@@ -166,8 +176,34 @@ namespace painT_project
 
         private void trackBar1_Scroll(object sender, EventArgs e)
         {
-            int value = trackBar1.Value + 1;
+            value = trackBar1.Value + 1;
             label3.Text = value.ToString() + " px";
+        }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
+            int width = Screen.PrimaryScreen.Bounds.Width + 10;
+            int height = Screen.PrimaryScreen.Bounds.Height;
+            panel1.Width = width;
+            button2.Location = new Point(width-32,4);
+            pictureBox1.Width = width;
+            pictureBox1.Height = height-105;
+        }
+
+        private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
+        {
+            
+        }
+
+        private void pictureBox1_MouseMove(object sender, MouseEventArgs e)
+        {
+            
+        }
+
+        private void pictureBox1_MouseUp(object sender, MouseEventArgs e)
+        {
+            moving = false;
         }
     }
 }
