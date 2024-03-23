@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace painT_project
 {
-    public partial class Form1 : Form
+    public partial class Form1 : Form //Loading screen :-)
     {
         public Form1()
         {
@@ -42,6 +42,11 @@ namespace painT_project
         private void button1_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace painT_project
 {
-    internal class ButtonHandler
+    internal class ButtonHandler // Vyřešení barev
     {
         public Color color;
         public bool pcXsc = true;
